@@ -8,4 +8,8 @@ public class UserRegistration {
         return firstName.matches(NAME_REGEX);
     }
 
+    public boolean validateLastName(String lastName) {
+        return lastName.matches(NAME_REGEX);
+    }
+
 }

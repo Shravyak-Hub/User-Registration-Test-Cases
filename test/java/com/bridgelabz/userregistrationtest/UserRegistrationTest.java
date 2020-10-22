@@ -7,9 +7,16 @@ import org.junit.Test;
 public class UserRegistrationTest {
 
     @Test
-    public void giveFirstName_WhenValid_ShouldReturnTrue() {
+    public void givenFirstName_WhenValid_ShouldReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
         boolean validation = userRegistration.validateFirstName("Shravya");
+        Assert.assertTrue(validation);
+    }
+
+    @Test
+    public void givenLastName_WhenValid_ShouldReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean validation = userRegistration.validateLastName("Kotha");
         Assert.assertTrue(validation);
     }
 
