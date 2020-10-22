@@ -27,4 +27,11 @@ public class UserRegistrationTest {
         Assert.assertTrue(validation);
     }
 
+    @Test
+    public void givenPassword_WhenValid_ShouldReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean validation = userRegistration.validatePassword("shravyak");
+        Assert.assertTrue(validation);
+    }
+
 }
