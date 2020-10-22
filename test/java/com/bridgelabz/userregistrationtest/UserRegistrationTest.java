@@ -14,24 +14,17 @@ public class UserRegistrationTest {
     }
 
     @Test
-    public void givenLastName_WhenValid_ShouldReturnTrue() {
+    public void givenFirstName_WhenLessThanThreeLetters_ShouldReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean validation = userRegistration.validateLastName("Kotha");
-        Assert.assertTrue(validation);
+        boolean validation = userRegistration.validateFirstName("Shr");
+        Assert.assertFalse(validation);
     }
 
     @Test
-    public void givenPhoneNumber_WhenValid_ShouldReturnTrue() {
+    public void givenFirstName_WhenFirstLetterNotUppercase_ShouldReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean validation = userRegistration.validatePhoneNumber("91 9591266655");
-        Assert.assertTrue(validation);
-    }
-
-    @Test
-    public void givenPassword_WhenValid_ShouldReturnTrue() {
-        UserRegistration userRegistration = new UserRegistration();
-        boolean validation = userRegistration.validatePassword("Shravyak1@");
-        Assert.assertTrue(validation);
+        boolean validation = userRegistration.validateFirstName("shravya");
+        Assert.assertFalse(validation);
     }
 
 }
