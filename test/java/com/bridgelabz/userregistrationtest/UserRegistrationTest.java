@@ -16,7 +16,7 @@ public class UserRegistrationTest {
     @Test
     public void givenFirstName_WhenLessThanThreeLetters_ShouldReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean validation = userRegistration.validateFirstName("Shr");
+        boolean validation = userRegistration.validateFirstName("Sh");
         Assert.assertFalse(validation);
     }
 
