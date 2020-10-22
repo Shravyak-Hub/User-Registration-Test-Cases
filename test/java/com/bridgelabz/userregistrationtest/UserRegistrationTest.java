@@ -30,7 +30,7 @@ public class UserRegistrationTest {
     @Test
     public void givenPassword_WhenValid_ShouldReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean validation = userRegistration.validatePassword("shravyak");
+        boolean validation = userRegistration.validatePassword("Shravyak1@");
         Assert.assertTrue(validation);
     }
 
