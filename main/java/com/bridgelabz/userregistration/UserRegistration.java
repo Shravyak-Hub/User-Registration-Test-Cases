@@ -1,0 +1,11 @@
+package com.bridgelabz.userregistration;
+
+public class UserRegistration {
+
+    public static final String NAME_REGEX = "^[A-Z]{1}[a-z]{2,}$";
+
+    public boolean validateFirstName(String firstName) {
+        return firstName.matches(NAME_REGEX);
+    }
+
+}
